@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdfaf6;
+  }
+  
+  #hero {
+    position: relative;
+    text-align: center;
+    padding: 150px 20px;
+    background: url('https://via.placeholder.com/1600x900?text=Hero+Image') no-repeat center center/cover;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  #hero h1,
+  #hero p,
+  #toggle-music {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #toggle-music {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #b5651d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .section {
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 0; 
+    transform: translateY(50px);
+  }
+  
+  .section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  .keyboard {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+  }
+  
+  .key {
+    width: 60px;
+    height: 200px;
+    background: linear-gradient(to bottom, #666, #444);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s ease, background 0.2s ease;
+  }
+  
+  .key:hover {
+    background: #888;
+  }
+  
+  .key:active {
+    transform: scale(0.95);
+    background: #aaa;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdfaf6;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#hero {
+    position: relative;
+    text-align: center;
+    padding: 150px 20px;
+    background: url('https://via.placeholder.com/1600x900?text=Hero+Image') no-repeat center center/cover;
+    color: white;
+    overflow: hidden;
+    animation: slideIn 2s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}  .section.visible {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
